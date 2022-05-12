@@ -77,13 +77,14 @@ export class MobilePDFReader extends React.Component<IProps,IStates> {
     return pdfjsLib.shadow(this, "loadingBar", bar);
   }
   private open (params) {
-    let url = params.url
+    let url = params.url.url
     let self = this
     this.setTitleUsingUrl(url)
+    console.log("URL::", url)
     // Loading document.
     let loadingTask = pdfjsLib.getDocument({
       url: url,
-      withCredentials: true,
+      withCredentials: params.url.withCredentials,
       maxImageSize: MAX_IMAGE_SIZE,
       cMapPacked: CMAP_PACKED
     })
@@ -98,7 +99,7 @@ export class MobilePDFReader extends React.Component<IProps,IStates> {
       self.pdfDocument = pdfDocument;
       self.pdfViewer.setDocument(pdfDocument)
       self.pdfLinkService.setDocument(pdfDocument)
-      self.pdfHistory.initialize(pdfDocument.fingerprint)
+      self.pdfHistory.initialize(pdfDocument.fingerprints)
       self.loadingBar.hide()
       self.setTitleUsingMetadata(pdfDocument)
     }, function (exception) {

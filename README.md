@@ -1,6 +1,5 @@
-# React-read-pdf
-[Chinese Document](https://github.com/forthealllight/blog/issues/27)
-> a mobile-friendly  PDF Reader in browser for React 16.x
+# clout-pdf-mobile-reader
+> a mobile-friendly forked for Clout PDF Reader in browser for React 16.x
 
 
 ## Features
@@ -20,30 +19,30 @@
 
 ## Quick Start
 
-### 1. Import react-read-pdf  into your react.js project.
+### 1. Import clout-pdf-mobile-reader  into your react.js project.
 
 (You should import react firt,The version of react must be more than 16.x)
 
 Using build tools:
 
 ```bash
-npm install --save react-read-pdf
+npm install --save clout-pdf-mobile-reader
 ```
 Using PDFReader in PC:
 ```js
 import React from 'react';
-import { PDFReader } from 'react-read-pdf';
+import { PDFReader } from 'clout-pdf-mobile-reader';
 ```
 Using MobilePDFReader in mobile terminal devices:
 ```js
 import React from 'react';
-import { MobilePDFReader } from 'react-read-pdf';
+import { MobilePDFReader } from 'clout-pdf-mobile-reader';
 
 ```
 ### 2. Now you have it. The simplest usage:
 
 ```js
-import { MobilePDFReader } from 'react-read-pdf';
+import { MobilePDFReader } from 'clout-pdf-mobile-reader';
 export default class Test extends Component{
   render(){
     return <div style={{overflow:'scroll',height:600}}>
@@ -59,18 +58,14 @@ import Test from './test'
 ReactDOM.render(<Test />, document.getElementById('root'));
 ```
 
-It supports all mobile terminal devices including mobile,pad and others,the next image is a lively example in iphoneX 
-
-<img src="https://raw.githubusercontent.com/wiki/forthealllight/react-read-pdf/ip.jpeg" width="320">
-
 ## Documentation
 
-react-read-pdf mainly consists of two different components. ***PDFReader and MobilePDFReader***.
+clout-pdf-mobile-reader mainly consists of two different components. ***PDFReader and MobilePDFReader***.
 
 ### 🌱 PDFReader
 
 ```js
-import { PDFReader } from 'react-read-pdf'
+import { PDFReader } from 'clout-pdf-mobile-reader'
 
 ...
 <PDFReader url={"http://localhost:3000/test.pdf"} ...>
@@ -165,7 +160,7 @@ the other is :
 ### 🌱 MobilePDFReader
 
 ```js
-import { MobilePDFReader } from 'react-read-pdf'
+import { MobilePDFReader } from 'clout-pdf-mobile-reader'
 
 ...
 <MobilePDFReader url={"http://localhost:3000/test.pdf"} ...>
@@ -291,10 +286,3 @@ Command | Description
 
 
 **Note**: replace `yarn` with `npm` if you use npm.
-
-
-**License**
-
-MIT License
-
-  [1]: https://raw.githubusercontent.com/wiki/forthealllight/react-read-pdf/ip.jpeg
